@@ -1,0 +1,3 @@
+My First Line writing to a file! 
+Well, whatta you know - my second line! 
+Now for the trifecta!

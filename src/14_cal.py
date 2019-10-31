@@ -22,3 +22,32 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+month = sys.argv[1]
+year = sys.argv[2]
+
+# user_input = input("14_cal.py month [year] ")
+user_list = [month, year]
+print(user_list)	
+if not user_list[0].strip():
+	month = datetime.today().month
+	print(calendar.month(2019, month))
+elif len(user_list) == 1:
+	month = int(user_list[0])
+	if month > 12 or month < 1:
+		print("Not a Valid Month")
+	else:
+		print(calendar.month(2019, month))
+elif len(user_list) == 2:
+	month = int(user_list[0])
+	year = int(user_list[1])
+	if month > 12 or month < 1:
+		print("Not a Valid Month")
+	else:
+		print(calendar.month(year, month))
+else:
+	print("Please put correct Month MM and Year YYYY seperated by spaces!")
+
+   
+  
+
